@@ -4,9 +4,7 @@
 
 <template>
   <div>
-    <SectionHero />
-    <SectionIntro />
-    <SectionAbout />
+    ひーろーです
   </div>
 </template>
 

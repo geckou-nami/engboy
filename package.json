@@ -10,8 +10,15 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "modern-css-reset": "^1.4.0",
     "nuxt": "^3.11.2",
+    "sass": "^1.74.1",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0",
+    "eslint-plugin-vue": "^9.24.0",
+    "prettier": "^3.2.5"
   }
 }

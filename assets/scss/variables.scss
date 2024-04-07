@@ -1,0 +1,65 @@
+@use 'functions' as *;
+// ここなおさないといけないのかもしれない↓
+$maxViewport: 1024;
+$minViewport: 599;
+
+
+:root {
+    // COLOR
+  --pink      : #eb51c2;
+  --black     : #111111;
+  --white     : #ffffff;
+  --green     : #00b21b;
+  --base-color: var(--white);
+  --main-color: var(--pink);
+  --text-color: var(--black);
+    // --hover-color      : var(--black);
+    // --shadow-color     : #0c0d0d1a;
+  
+  // FONT
+  --fs-medium            : #{calcClamp(14, 15, $minViewport, $maxViewport)};
+  --fs-large             : #{calcClamp(16, 18, $minViewport, $maxViewport)};
+  --fs-larger            : #{calcClamp(18, 22, $minViewport, $maxViewport)};
+  --fs-max               : #{calcClamp(20, 28, $minViewport, $maxViewport)};
+  --fs-small             : #{calcClamp(12, 14, $minViewport, $maxViewport)};
+  --fs-smaller           : #{calcClamp(11, 12, $minViewport, $maxViewport)};
+  --fs-min               : 10px;
+
+  --fs-main-title        : #{calcClamp(28, 90, $minViewport, $maxViewport)};
+  --fs-main-lead        : #{calcClamp(10, 28, $minViewport, $maxViewport)};
+  --fs-button        : #{calcClamp(13, 20, $minViewport, $maxViewport)};
+  --fs-about-heading        : #{calcClamp(22, 32, $minViewport, $maxViewport)};
+  --fs-about-title        : #{calcClamp(18, 24, $minViewport, $maxViewport)};
+  // --fs-main-title        : #{calcClamp(28, 90, $minViewport, $maxViewport)};
+
+
+  --line-height-tight    : 1.12;
+  --line-height-narrow   : 1.4;
+  --line-height-normal   : 1.6;
+  --letter-spacing-wide  : 1em;
+  --letter-spacing-normal: .08em;
+  --letter-spacing-narrow: .04em;
+
+  // VALUE
+  --bv                   : #{calcClamp(6, 8, $minViewport, $maxViewport)};
+  --sp                   : #{calcClamp(6, 8, $minViewport, $maxViewport)};
+  --sp-larger            : calc(var(--sp) * 8);
+  --sp-large             : calc(var(--sp) * 4);
+  --sp-medium            : calc(var(--sp) * 2);
+  --sp-small             : var(--sp);
+  --sp-min               : calc(var(--sp) / 2);
+  --golden-ratio         : 1.618 / 1;
+  --silver-ratio         : 1.414 / 1;
+  --mobile-lower-width   : 430px;
+  --tablet-lower-width   : 740px;
+  --desktop-lower-width  : 980px;
+  --contents-max-width   : 1440px;
+  --global-header-height : calc(var(--bv) * 8);
+  --global-sub-nav-height: calc(var(--bv) * 6);
+  --z-index-max          : 100;
+  --z-index-overlay      : 90;
+  --z-index-tooltip      : 80;
+  --z-index-nav          : 70;
+  --z-index-header       : 60;
+  --z-index-contents     : 50;
+}
