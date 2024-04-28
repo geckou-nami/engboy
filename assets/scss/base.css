@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 :root {
   --pink: #eb51c2;
   --black: #111111;
@@ -16,6 +17,7 @@
   --fs-main-title: clamp(1.75rem, -3.7114705882rem + 14.5882352941vw, 5.625rem);
   --fs-main-lead: clamp(0.625rem, -0.9605882353rem + 4.2352941176vw, 1.75rem);
   --fs-button: clamp(0.8125rem, 0.1958823529rem + 1.6470588235vw, 1.25rem);
+  --fs-button-small: clamp(0.75rem, 0.4857352941rem + 0.7058823529vw, 0.9375rem);
   --fs-about-heading: clamp(1.375rem, 0.4941176471rem + 2.3529411765vw, 2rem);
   --fs-about-title: clamp(1.125rem, 0.5964705882rem + 1.4117647059vw, 1.5rem);
   --fs-cta: clamp(1.5rem, -2.0235294118rem + 9.4117647059vw, 4rem);
@@ -41,6 +43,7 @@
   --tablet-lower-width: 740px;
   --desktop-lower-width: 980px;
   --contents-max-width: 1440px;
+  --header-max-width: 1600px;
   --global-header-height: calc(var(--bv) * 8);
   --global-sub-nav-height: calc(var(--bv) * 6);
   --z-index-max: 100;
@@ -49,7 +52,13 @@
   --z-index-nav: 70;
   --z-index-header: 60;
   --z-index-contents: 50;
+  --z-index-bg: -10;
+  --hero-desktop-height: 680px;
+  --hero-tablet-height: 500px;
+  --hero-mobile-height: 410px;
+  --about-max-width: 1300px;
   --section-max-width: 1170px;
+  --carousel-button-size: clamp(2.5rem, 0.7382352941rem + 4.7058823529vw, 3.75rem);
 }
 
 html {

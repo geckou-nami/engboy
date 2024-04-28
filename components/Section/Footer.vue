@@ -1,7 +1,3 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
   <div :class="$style.footer_container">
     <img src="assets/images/pc_cta.jpg" alt="スタッフ写真">
@@ -11,7 +7,7 @@
         :class="$style.link_button"
         :btnColor="'var(--white)'"
         :textColor="'var(--pink)'"
-        />
+      />
     </div>
     <div :class="$style.logo_area">
       <svg :class="$style.logo" viewBox="0 0 87 11">

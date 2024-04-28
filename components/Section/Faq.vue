@@ -20,7 +20,6 @@ const questions = ref([
 const toggle = (index: number) => {
   questions.value[index].open = !questions.value[index].open
 }
-
 </script>
 
 <template>
@@ -40,8 +39,16 @@ const toggle = (index: number) => {
         >
           <summary @click="toggle(index)" :class="$style.question">
             {{ item.question }}
-            <span v-if="item.open">▲</span>
-            <span v-else>▼</span>
+            <span v-if="item.open">
+              <span class="material-icons">
+                expand_less
+              </span>
+            </span>
+            <span v-else>
+              <span class="material-icons">
+                expand_more
+              </span>
+            </span>
           </summary>
           <p
             :class="[$style.answer, item.open ? $style.active : '']"

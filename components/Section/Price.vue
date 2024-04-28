@@ -56,7 +56,7 @@ onMounted(() => {
             <div v-if="index === 1" :class="$style.recommended">
               オススメ！
             </div>
-            <h3>{{ course.title }}</h3>
+            <h4>{{ course.title }}</h4>
             <p :class="$style.price">{{ course.price }}</p>
             <p :class="$style.admission_fee">{{ course.admissionFee }}</p>
             <dl>
@@ -69,7 +69,6 @@ onMounted(() => {
             </dl>
           </div>
         </div>
-
       </div>
     <BottomDecoration
       id="decoration"
@@ -78,19 +77,20 @@ onMounted(() => {
 </template>
 
 <style lang = "scss" module>
+@use '~/assets/scss/mixin' as *;
 
 .price_container {
-  width:100%;
+  width           : 100%;
   background-color: var(--pink);
-  position:relative;
+  position        : relative;
 }
 
 .price_contents {
-  max-width: var(--section-max-width);
-  margin   : 0 auto;
+  max-width     : var(--section-max-width);
+  margin        : 0 auto;
   padding-inline: var(--sp-large);
-  padding-block: var(--sp-large);
-  margin-block: var(--decoration-height);
+  padding-block : var(--sp-large);
+  margin-block  : var(--decoration-height);
 }
 
 .card_wrapper {
@@ -101,7 +101,7 @@ onMounted(() => {
   overflow-x                : auto;              // 横スクロールを有効にする
   -webkit-overflow-scrolling: touch;             // iOSデバイスでのスムーズなスクロール
   scrollbar-width           : thin;              // スクロールバーの幅を薄く設定（Firefoxのみ）
-  scrollbar-color           : #ccc #ffffff;      // スクロールバーの色を設定（Firefoxのみ）
+  scrollbar-color           : #ccc #ffffff;  // スクロールバーの色を設定（Firefoxのみ）
 
   &::-webkit-scrollbar {
     height: 8px;  // Webkitブラウザでのスクロールバーの高さ
@@ -114,16 +114,16 @@ onMounted(() => {
 }
 
 .card {
-  --card-width           : calc(var(--section-max-width) / 3 - var(--sp-medium) * 2);
-  width               : var(--card-width);
+  --card-width    : calc(var(--section-max-width) / 3 - var(--sp-medium) * 2);
+  width           : var(--card-width);
   background-color: var(--white);
   padding-top     : var(--sp-large);
   padding-inline  : var(--sp-medium);
   border-radius   : 1rem;
   text-align      : center;
   position        : relative;
-  flex-shrink     : 0.1; // カードの圧縮を防止
-  margin-top: var(--sp-large);
+  flex-shrink     : 0.1;                                                        // カードの圧縮を防止
+  margin-top      : var(--sp-large);
 
   h3 {
     font-size     : 26px;
@@ -171,14 +171,10 @@ dd {
 }
 
 .top_decoration {
-  position: absolute;
-  top:0%;
-  transform: translateY(-99%);
+  @include topDecoration;
 }
 
 .bottom_decoration {
-  position: absolute;
-  bottom:0%;
-  transform: translateY(99%);
+  @include bottomDecoration;
 }
 </style>

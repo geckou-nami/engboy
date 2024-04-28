@@ -1,5 +1,6 @@
 @forward 'variables';
 @use 'mixin' as *;
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 html {
   -moz-text-size-adjust: none;
@@ -12,7 +13,6 @@ body {
   background-color     : var(--base-color);
   color                : var(--text-color);
   font-family:  "Josefin Sans", Arial, "Hiragino Kaku Gothic ProN","Hiragino Sans", Meiryo, sans-serif;
-  // font-family          : 'Helvetica Neue', 'Arial', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'BIZ UDPGothic', 'Yu Gothic', sans-serif;
   font-size            : var(--fs-medium);
   line-height          : var(--line-height-normal);
   letter-spacing       : var(--letter-spacing-normal);

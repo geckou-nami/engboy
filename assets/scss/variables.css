@@ -51,6 +51,11 @@
   --z-index-nav: 70;
   --z-index-header: 60;
   --z-index-contents: 50;
+  --z-index-bg: -10;
+  --hero-desktop-height: 680px;
+  --hero-tablet-height: 500px;
+  --hero-mobile-height: 410px;
+  --about-max-width: 1300px;
   --section-max-width: 1170px;
   --carousel-button-size: clamp(2.5rem, 0.7382352941rem + 4.7058823529vw, 3.75rem);
 }

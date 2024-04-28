@@ -1,11 +1,11 @@
 @use 'functions' as *;
-// ここなおさないといけないのかもしれない↓
+  // ここなおさないといけないのかもしれない↓
 $maxViewport: 1024;
 $minViewport: 599;
 
 
 :root {
-    // COLOR
+      // COLOR
   --pink      : #eb51c2;
   --black     : #111111;
   --white     : #ffffff;
@@ -13,35 +13,26 @@ $minViewport: 599;
   --base-color: var(--white);
   --main-color: var(--pink);
   --text-color: var(--black);
-    // --hover-color      : var(--black);
-    // --shadow-color     : #0c0d0d1a;
   
-  // FONT
-  --fs-medium            : #{calcClamp(14, 15, $minViewport, $maxViewport)};
-  --fs-large             : #{calcClamp(16, 18, $minViewport, $maxViewport)};
-  --fs-larger            : #{calcClamp(18, 22, $minViewport, $maxViewport)};
-  --fs-max               : #{calcClamp(20, 28, $minViewport, $maxViewport)};
-  --fs-small             : #{calcClamp(12, 14, $minViewport, $maxViewport)};
-  --fs-smaller           : #{calcClamp(11, 12, $minViewport, $maxViewport)};
-  --fs-min               : 10px;
-
-  --fs-main-title   : #{calcClamp(28, 90, $minViewport, $maxViewport)};
-  --fs-main-lead    : #{calcClamp(10, 28, $minViewport, $maxViewport)};
-  --fs-button       : #{calcClamp(13, 20, $minViewport, $maxViewport)};
-  --fs-button-small : #{calcClamp(12, 15, $minViewport, $maxViewport)};
-  --fs-about-heading: #{calcClamp(22, 32, $minViewport, $maxViewport)};
-  --fs-about-title  : #{calcClamp(18, 24, $minViewport, $maxViewport)};
-  --fs-cta          : #{calcClamp(24, 64, $minViewport, $maxViewport)};
-  --logo-width        : #{calcClamp(84, 180, $minViewport, $maxViewport)};
+    // FONT
+  --fs-medium : #{calcClamp(14, 15, $minViewport, $maxViewport)};
+  --fs-large  : #{calcClamp(16, 18, $minViewport, $maxViewport)};
+  --fs-larger : #{calcClamp(18, 22, $minViewport, $maxViewport)};
+  --fs-max    : #{calcClamp(20, 28, $minViewport, $maxViewport)};
+  --fs-small  : #{calcClamp(12, 14, $minViewport, $maxViewport)};
+  --fs-smaller: #{calcClamp(11, 12, $minViewport, $maxViewport)};
+  --fs-min    : 10px;
+// FONT custom
+  --fs-main-title        : #{calcClamp(28, 90, $minViewport, $maxViewport)};
+  --fs-main-lead         : #{calcClamp(10, 28, $minViewport, $maxViewport)};
+  --fs-button            : #{calcClamp(13, 20, $minViewport, $maxViewport)};
+  --fs-button-small      : #{calcClamp(12, 15, $minViewport, $maxViewport)};
+  --fs-about-heading     : #{calcClamp(22, 32, $minViewport, $maxViewport)};
+  --fs-about-title       : #{calcClamp(18, 24, $minViewport, $maxViewport)};
+  --fs-cta               : #{calcClamp(24, 64, $minViewport, $maxViewport)};
+  --logo-width           : #{calcClamp(84, 180, $minViewport, $maxViewport)};
   --fs-heading-en        : #{calcClamp(40, 64, $minViewport, $maxViewport)};
   --fs-heading-jp        : #{calcClamp(14, 20, $minViewport, $maxViewport)};
-
-  // --fs-cta          : #{calcClamp(24, 64, $minViewport, $maxViewport)};
-  // --logo-width        : #{calcClamp(84, 180, $minViewport, $maxViewport)};
-  // --fs-heading-en        : #{calcClamp(40, 64, $minViewport, $maxViewport)};
-  // --fs-heading-jp        : #{calcClamp(14, 20, $minViewport, $maxViewport)};
-
-
   --line-height-tight    : 1.12;
   --line-height-narrow   : 1.4;
   --line-height-normal   : 1.6;
@@ -49,7 +40,7 @@ $minViewport: 599;
   --letter-spacing-normal: .08em;
   --letter-spacing-narrow: .04em;
 
-  // VALUE
+    // VALUE
   --bv                   : #{calcClamp(6, 8, $minViewport, $maxViewport)};
   --sp                   : #{calcClamp(6, 8, $minViewport, $maxViewport)};
   --sp-larger            : calc(var(--sp) * 8);
@@ -72,8 +63,12 @@ $minViewport: 599;
   --z-index-nav          : 70;
   --z-index-header       : 60;
   --z-index-contents     : 50;
-
-  // 手作り
-  --section-max-width: 1170px;
+  --z-index-bg           : -10;
+// VALUE custom
+  --hero-desktop-height : 680px;
+  --hero-tablet-height  : 500px;
+  --hero-mobile-height  : 410px;
+  --about-max-width     : 1300px;
+  --section-max-width   : 1170px;
   --carousel-button-size: #{calcClamp(40, 60, $minViewport, $maxViewport)};
 }
