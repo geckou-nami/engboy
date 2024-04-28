@@ -1,10 +1,26 @@
 <script setup lang="ts">
+const props = defineProps({
+  btnColor: {
+    type: String,
+    default: 'var(--pink)'
+  },
+  textColor: {
+    type: String,
+    default: 'var(--white)'
+  }
+  ,textSize: {
+    type: String,
+    default: 'var(--fs-button)'
+  }
+});
 
 </script>
 
 <template>
   <div>
-    <button>
+    <button 
+      :class="$style.button"
+      :style="{ 'background-color': btnColor, 'color': textColor, 'font-size': textSize }">
       無料カウンセリングを受ける
     </button>    
   </div>
@@ -12,11 +28,11 @@
 
 <style lang = "scss" module>
 
-button {
-  background-color: var(--pink);
-  font-size       : var(--fs-button);
+.button {
+  --button-color  : var(--pink);
+  background-color: var(--button-color);
   color           : white;
-  padding         : calc(var(--sp-small) * 3) calc(var(--sp-small) * 5.5);
+  padding         : 0.9em 2.5em;
   border-radius   : 50px;
   border          : none;
   cursor          : pointer;

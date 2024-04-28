@@ -25,12 +25,21 @@ $minViewport: 599;
   --fs-smaller           : #{calcClamp(11, 12, $minViewport, $maxViewport)};
   --fs-min               : 10px;
 
-  --fs-main-title        : #{calcClamp(28, 90, $minViewport, $maxViewport)};
-  --fs-main-lead        : #{calcClamp(10, 28, $minViewport, $maxViewport)};
-  --fs-button        : #{calcClamp(13, 20, $minViewport, $maxViewport)};
-  --fs-about-heading        : #{calcClamp(22, 32, $minViewport, $maxViewport)};
-  --fs-about-title        : #{calcClamp(18, 24, $minViewport, $maxViewport)};
-  // --fs-main-title        : #{calcClamp(28, 90, $minViewport, $maxViewport)};
+  --fs-main-title   : #{calcClamp(28, 90, $minViewport, $maxViewport)};
+  --fs-main-lead    : #{calcClamp(10, 28, $minViewport, $maxViewport)};
+  --fs-button       : #{calcClamp(13, 20, $minViewport, $maxViewport)};
+  --fs-button-small : #{calcClamp(12, 15, $minViewport, $maxViewport)};
+  --fs-about-heading: #{calcClamp(22, 32, $minViewport, $maxViewport)};
+  --fs-about-title  : #{calcClamp(18, 24, $minViewport, $maxViewport)};
+  --fs-cta          : #{calcClamp(24, 64, $minViewport, $maxViewport)};
+  --logo-width        : #{calcClamp(84, 180, $minViewport, $maxViewport)};
+  --fs-heading-en        : #{calcClamp(40, 64, $minViewport, $maxViewport)};
+  --fs-heading-jp        : #{calcClamp(14, 20, $minViewport, $maxViewport)};
+
+  // --fs-cta          : #{calcClamp(24, 64, $minViewport, $maxViewport)};
+  // --logo-width        : #{calcClamp(84, 180, $minViewport, $maxViewport)};
+  // --fs-heading-en        : #{calcClamp(40, 64, $minViewport, $maxViewport)};
+  // --fs-heading-jp        : #{calcClamp(14, 20, $minViewport, $maxViewport)};
 
 
   --line-height-tight    : 1.12;
@@ -54,6 +63,7 @@ $minViewport: 599;
   --tablet-lower-width   : 740px;
   --desktop-lower-width  : 980px;
   --contents-max-width   : 1440px;
+  --header-max-width     : 1600px;
   --global-header-height : calc(var(--bv) * 8);
   --global-sub-nav-height: calc(var(--bv) * 6);
   --z-index-max          : 100;
@@ -62,4 +72,8 @@ $minViewport: 599;
   --z-index-nav          : 70;
   --z-index-header       : 60;
   --z-index-contents     : 50;
+
+  // 手作り
+  --section-max-width: 1170px;
+  --carousel-button-size: #{calcClamp(40, 60, $minViewport, $maxViewport)};
 }

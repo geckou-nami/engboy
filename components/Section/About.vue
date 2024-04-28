@@ -4,11 +4,11 @@
 
 <template>
   <div :class="$style.about_container">
-    <div :class="$style.about_wrapper">
-      <div>
-        <img :class="$style.about_image" src="assets/images/about-training.jpg" alt="トレーニング風景">
+    <div :class="$style.about_training_wrapper">
+      <div :class="$style.about_raining_image">
+        <img src="assets/images/about-training.jpg" alt="トレーニング風景">
       </div>
-      <div :class="$style.about_text_contents">
+      <div :class="$style.training_text_contents">
         <h3>Training</h3>
         <h4 :class="$style.about_heading">
           セッションはすべて英語。<br>LAさながらの環境
@@ -21,8 +21,11 @@
       </div>
     </div>
 
-    <!-- <div :class="$style.about_wrapper">
-      <div :class="$style.about_text_contents">
+    <div :class="$style.about_food_wrapper">
+      <div :class="$style.about_food_image">
+        <img src="assets/images/about-food.jpg" alt="食事例">
+      </div>
+      <div :class="$style.food_text_contents">
         <h3><span>Food</span></h3>
         <h4 :class="$style.about_heading">
           低糖質レストランを完備！<br>美味しく食べてダイエット
@@ -32,31 +35,39 @@
           メニューも豊富で飽きさせません。美味しく食べてしっかり痩せる!しかも英語力もアップ!それがENGBODYなのです。
         </p>
       </div>
-      <div>
-        <img :class="$style.about_food_image" src="assets/images/about-food.jpg" alt="食事例">
-      </div>
-    </div> -->
+    </div>
+    <LinkButton :class="$style.link_button" />
   </div>
 </template>
 
 <style lang = "scss" module>
 @use '~/assets/scss/mixin' as *;
 
-.about_wrapper {
-  position: relative;
-  margin-block: var(--sp-larger);
-
-  /* @include mediaScreen("desktop") {
-    display: flex;
-    justify-content: space-between;
-  } */
+.about_container {
+  margin-bottom: calc(var(--sp-large) * 4);
 }
 
-.about_image {
-  width: 70%;
+.about_training_wrapper,
+.about_food_wrapper {
+  display: flex;
+  justify-content: left;
+  margin-block: var(--sp-larger);
   position: relative;
-  top:0;
-  left:0;
+
+  @include mediaScreen("desktop") {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.about_food_wrapper {
+  justify-content: right;
+}
+
+.about_raining_image,
+.about_food_image {
+  width: 70%;
 
   > img {
     width: 100%;
@@ -67,33 +78,22 @@
   }
 }
 
-/* .about_food_image {
-  width: 70%;
-  position: absolute;
-  top:0;
-  right:0;
-
-  > img {
-    width: 100%;
-  }
-} */
-
-.about_text_contents {
+.training_text_contents,
+.food_text_contents {
   width           : 555px;
   background-color: var(--white);
   box-shadow      : 0 0 20px rgba(0, 0, 0, 0.1);
   padding         : calc(var(--sp-medium) * 2);
-  border-radius: 10px;
-  position: absolute;
-  top: 20%;
-  right: 0;
-  margin-right: var(--sp-medium);
+  border-radius   : 10px;
+  position        : absolute;
+  bottom : -5%;
+  right           : 0;
+  margin-right    : var(--sp-medium);
 
   @include mediaScreen("desktop") {
-    width: 100%;
+    width: 95%;
     position: relative;
     top:0;
-    right: auto;
     margin: -20px 30px;
   }
 
@@ -107,6 +107,19 @@
   }
 }
 
+.food_text_contents  {
+  left           : 0;
+  margin-left    : var(--sp-medium);
+
+  @include mediaScreen("desktop") {
+    width: 95%;
+    position: relative;
+    top:0;
+    margin: -20px 30px;
+  }
+}
+
+
 .about_heading {
   font-size   : var(--fs-about-heading);
   line-height : var(--line-height-narrow);
@@ -115,5 +128,10 @@
 
 .about_description {
   font-size: var(--fs-medium);
+}
+
+.link_button {
+  display: block;
+  text-align: center;
 }
 </style>
